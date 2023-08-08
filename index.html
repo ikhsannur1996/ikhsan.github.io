@@ -71,6 +71,18 @@
             background-color: #333;
             color: #fff;
         }
+        .profile-picture {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .profile-picture img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* This makes the image circular */
+            object-fit: cover;
+            border: 2px solid #333;
+        }
     </style>
 </head>
 <body>
@@ -90,6 +102,9 @@
 
     <section id="about" class="section">
         <h2 class="section-title">About Me</h2>
+        <div class="profile-picture">
+            <img src="path/to/your/profile-picture.jpg" alt="Your Profile Picture">
+        </div>
         <p>Write a compelling description about yourself here.</p>
     </section>
 
