@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohamad Ikhsan Nurulloh</title>
+    <title>Your Name - GitHub Profile</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -78,21 +78,30 @@
         .profile-picture img {
             width: 150px;
             height: 150px;
-            border-radius: 50%;
+            border-radius: 50%; /* This makes the image circular */
             object-fit: cover;
             border: 2px solid #333;
         }
+        .portfolio-slider img {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 <body>
     <header>
-        <h1>Mohamad Ikhsan Nurulloh</h1>
+        <h1>Your Name</h1>
         <p>Web Developer</p>
     </header>
 
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -100,12 +109,20 @@
     </nav>
 
     <section id="about" class="section">
-        <div class="profile-picture">
-            <img src="profile.jpeg" alt="Your Profile Picture">
-        </div>
-        
         <h2 class="section-title">About Me</h2>
+        <div class="profile-picture">
+            <img src="profile.jpg" alt="Your Profile Picture">
+        </div>
         <p>Write a compelling description about yourself here.</p>
+    </section>
+
+    <section id="portfolio" class="section">
+        <h2 class="section-title">Portfolio</h2>
+        <div class="portfolio-slider">
+            <div><img src="project1.jpg" alt="Project 1"></div>
+            <div><img src="project2.jpg" alt="Project 2"></div>
+            <!-- Add more project images as needed -->
+        </div>
     </section>
 
     <section id="education" class="section">
@@ -141,5 +158,18 @@
     <footer>
         <p>&copy; 2023 Your Name. All rights reserved.</p>
     </footer>
+
+    <script>
+        $(document).ready(function(){
+            $('.portfolio-slider').slick({
+                autoplay: true,
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                adaptiveHeight: true
+            });
+        });
+    </script>
 </body>
 </html>
